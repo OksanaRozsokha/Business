@@ -1,0 +1,26 @@
+html {
+  font-size: 0.625rem;
+}
+.mt-7 {
+  margin-top: 5rem;
+}
+.error {
+  border: 2px solid red;
+}
+.success {
+  border: 2px solid green;
+}
+.active {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  @include transition-duration(.1s);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  @include transition-duration(.3s);
+}
+

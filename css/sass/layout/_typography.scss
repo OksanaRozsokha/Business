@@ -1,0 +1,28 @@
+.text {
+  @include open-sans(1.3rem);
+  color: $common-text;
+  line-height: 2.2rem;
+
+  &-white {
+    color: $white;
+  }
+  &-grey {
+    color: $grey-white;
+  }
+}
+
+
+.title {
+  @include lato(1.6rem, 700);
+  color: $main-dark;
+  text-transform: uppercase;
+  line-height: 2.2rem;
+  &-big {
+    @include gotham(3rem);
+    font-weight: 900;
+    color: $common-text;
+  }
+  &-white {
+    color: $white;
+  }
+}
