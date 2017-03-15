@@ -84,7 +84,8 @@ $(document).ready(function() {
 
     //  menu on click
     let flagMenu = true;
-    $('.menu').on('click', function () {
+    $('.menu').on('click', function (e) {
+        e.stopPropagation();
         if(flagMenu) {
             flagMenu = false;
             $('.menu-list').slideToggle(function () {
@@ -92,6 +93,13 @@ $(document).ready(function() {
             });
             $('body').toggleClass('active');
         }
+    });
+    $('body').on('click', function () {
+        $('.menu-list').fadeOut();
+        $(this).removeClass('active');
+    });
+    $('.menu-list').on('click', function (e) {
+       e.stopPropagation();
     });
 
     $(document).ready(function(){
